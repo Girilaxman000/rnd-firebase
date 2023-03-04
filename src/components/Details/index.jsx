@@ -86,7 +86,7 @@ const Details = () => {
       </div>
       <div className="grid grid-cols-3 ">
         <form
-          className="col-span-2 w-[60%] ml-auto mr-16 p-10"
+          className="col-span-2 w-[70%] ml-auto  p-10"
           onSubmit={handleSubmit}
         >
           <div className="flex flex-col gap-5">
@@ -344,7 +344,7 @@ const Details = () => {
           </p>
         </form>
         <div className="col-span-1 bg-blue-500 h-[100%] flex  flex-col gap-3 p-10">
-          <h1 className="text-white text-6xl font-bold">Need Help ?</h1>
+          <h1 className="text-white text-4xl font-bold">Need Help ?</h1>
           <p className="text-white text-[18px]">
             If you are unsure what to enter in a particular field, please refer
             to this pane and you will see a message with detailed instructions.

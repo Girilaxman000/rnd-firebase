@@ -37,8 +37,8 @@ const CarouselComponent = () => {
       <h1 className="text-center text-2xl font-bold">Customer Reviews</h1>
       <div className="pt-5">
         <Carousel showArrows={false}>
-          {items.map((item) => (
-            <div className="w-[30%]">
+          {items.map((item, index) => (
+            <div className="w-[30%]" key={index}>
               <div className="flex justify-center">
                 <img src={star} alt="" className="w-10" />
                 <img src={star} alt="" className="w-10" />
