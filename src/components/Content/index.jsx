@@ -12,7 +12,7 @@ const Content = () => {
     <div className="bg-gradient-to-r to-cyan-500 from-blue-500    p-5 ">
       <div className="w-[90%] mx-auto">
         <div className="flex justify-between items-center">
-          <h1 className="color text-2xl font-semibold">
+          <h1 className="color text-2xl text-white font-semibold">
             Copyrights © 2017 All Rights Reserved by LendingThree.
           </h1>
           <div data-aos="flip-up">
@@ -117,10 +117,10 @@ const Content = () => {
             The offers that you might receive are from companies from which
             LendingThree receives compensation. This compensation may impact
             what offers you receive and how/where products appear on this site
-            (including, for example, the order in which they appear). Prospers
-            Loans does not include all lenders available in the marketplace. If
-            you are presented with an offer, carefully review the details before
-            signing.?
+            (including, for example, the order in which they appear).
+            LendingThree does not include all lenders available in the
+            marketplace. If you are presented with an offer, carefully review
+            the details before signing.?
           </p>
         </div>
       </div>

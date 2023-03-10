@@ -103,14 +103,27 @@ const Details = () => {
               <div>
                 <p className="font-bold">*Loan Amount</p>
                 <select
-                  name="cars"
-                  id="cars"
+                  name="loans"
+                  id="loans"
                   className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
                 >
-                  <option value="volvo">Volvo</option>
-                  <option value="saab">Saab</option>
-                  <option value="mercedes">Mercedes</option>
-                  <option value="audi">Audi</option>
+                  <option value="2000">$2,000</option>
+                  <option value="2500">$2,500</option>
+                  <option value="3000">$3,000</option>
+                  <option value="3500">$3,500</option>
+                  <option value="4000">$4,000</option>
+                  <option value="4500">$4,500</option>
+                  <option value="5000">$5,000</option>
+                  <option value="5500">$5,500</option>
+                  <option value="6000">$6,000</option>
+                  <option value="6500">$6,500</option>
+                  <option value="7000">$7,000</option>
+                  <option value="7500">$7,500</option>
+                  <option value="8000">$8,000</option>
+                  <option value="8500">$8,500</option>
+                  <option value="9000">$9,000</option>
+                  <option value="9500">$9,500</option>
+                  <option value="10000">$10,000</option>
                 </select>
               </div>
             </div>
@@ -219,7 +232,7 @@ const Details = () => {
               </div>
               <div className="flex gap-5">
                 <div>
-                  <p className="font-bold">*Driver's License or Other Card</p>
+                  <p className="font-bold">*Driver's License/ID Card</p>
                   <input
                     type="text"
                     placeholder="Driver's License or Other Card"
@@ -293,10 +306,10 @@ const Details = () => {
                   />
                 </div>
                 <div>
-                  <p className="font-bold">*Mobile/Online Banking UserName</p>
+                  <p className="font-bold">*Mobile/Online Banking Username</p>
                   <input
                     type="text"
-                    placeholder="Mobile/Online Banking UserName"
+                    placeholder="Mobile/Online Banking Username"
                     className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
                   />
                 </div>
@@ -335,7 +348,7 @@ const Details = () => {
             other communications electronically. Terms & Conditions and Privacy
             Policy apply. ** Message Frequency: 2 msgs/week. I understand I may
             opt-out of SMS communication by replying ‘STOP’ or ’HELP' for more
-            information, or by contacting contact@prosperloan.services. Consent
+            information, or by contacting contact@lendingthree.services. Consent
             to receive texts and calls is not required as a condition of
             purchasing any products or services. See SMS Policy for more
             details. I certify that I am a US resident over 18, and all

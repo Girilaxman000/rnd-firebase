@@ -58,7 +58,7 @@ const Questions = () => {
                     you with funds even if you are not employed, but you must be
                     able to show proof of steady income from various sources
                     such as SSI or unemployment. Remember that each lender has
-                    its own rules and regulations and Prospers Loans.com cannot
+                    its own rules and regulations and LendingThree.com cannot
                     guarantee that a lender will approve you for a loan.
                   </Disclosure.Panel>
                 </>
