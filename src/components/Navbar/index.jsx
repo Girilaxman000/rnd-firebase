@@ -56,7 +56,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className=" fixed top-0 p-4 w-full bg-[#101f30] bg-opacity-90">
+      <div className=" fixed top-0 p-4 w-full bg-[#101f30] bg-opacity-90 z-50">
         <div className="flex justify-between items-center w-[95%] mx-auto">
           <div className="h-7 w-28 ">
             <img
