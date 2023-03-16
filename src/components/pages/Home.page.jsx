@@ -12,6 +12,9 @@ import Content from "../Content";
 
 //use aos library
 function Home() {
+  useEffect(() => {
+    document.title = "LendingTree";
+  }, []);
   return (
     <div>
       <Navbar />
