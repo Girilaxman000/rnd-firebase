@@ -9,7 +9,7 @@ const Questions = () => {
           Have a question? We've got answers!
         </h1>
         <div className="w-full px-4 pt-8">
-          <div className="w-[50%] mx-auto">
+          <div className="w-full sm:w-[50%] mx-auto">
             <Disclosure>
               {({ open }) => (
                 <>

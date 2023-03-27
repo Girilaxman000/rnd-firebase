@@ -2,12 +2,12 @@ import { getApps, initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDFDHO2NOVd2hNZTvgbVTBvfgXnvC7u8Q0",
-  authDomain: "namraj-a5567.firebaseapp.com",
-  projectId: "namraj-a5567",
-  storageBucket: "namraj-a5567.appspot.com",
-  messagingSenderId: "1057513344963",
-  appId: "1:1057513344963:web:a50a52d7f5dfa0ca983776",
+  apiKey: "AIzaSyDPcCEoMy4oOH8_otMuTlUAhzGhEHFDyCs",
+  authDomain: "lendingthree-c92c5.firebaseapp.com",
+  projectId: "lendingthree-c92c5",
+  storageBucket: "lendingthree-c92c5.appspot.com",
+  messagingSenderId: "321361256593",
+  appId: "1:321361256593:web:9cf521cc235b6ddbd3df30",
 };
 
 // Initialize Firebase

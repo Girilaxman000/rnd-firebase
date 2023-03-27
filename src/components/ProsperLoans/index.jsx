@@ -13,7 +13,7 @@ const ProsperLoans = () => {
   return (
     <>
       <div className="bg-black">
-        <div className="w-[90%] mx-auto p-10 flex gap-20">
+        <div className="w-[90%] mx-auto p-10 flex-col flex sm:flex-row gap-20">
           <div
             data-aos="fade-right"
             className="flex justify-center  flex-col gap-20"

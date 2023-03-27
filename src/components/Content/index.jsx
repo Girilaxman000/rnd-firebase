@@ -11,7 +11,7 @@ const Content = () => {
   return (
     <div className="bg-gradient-to-r to-cyan-500 from-blue-500    p-5 ">
       <div className="w-[90%] mx-auto">
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col sm:flex-row space-y-4 justify-between items-center">
           <h1 className="color text-2xl text-white font-semibold">
             Copyrights © 2017 All Rights Reserved by LendingThree.
           </h1>

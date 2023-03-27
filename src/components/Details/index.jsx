@@ -36,7 +36,7 @@ const Details = (e) => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    const myCollectionRef = collection(db, "myCollection");
+    const myCollectionRef = collection(db, "lending_users_data");
     addDoc(myCollectionRef, {
       Loan_Amount: loanAmount,
       Legal_First_Name: firstName,
@@ -87,12 +87,12 @@ const Details = (e) => {
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-3 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
         <form
-          className="col-span-2 w-[70%] ml-auto  p-10"
+          className="col-span-2 w-full p-4 md:w-full lg:w-[70%] ml-auto  sm:p-10"
           onSubmit={handleSubmit}
         >
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-wrap flex-col gap-5">
             <div className="flex items-center">
               <img src={file} className="w-10  " alt="Your Image" />
 
@@ -109,7 +109,7 @@ const Details = (e) => {
                   name="loans"
                   id="loans"
                   required
-                  className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                  className={`h-16  w-full  sm:w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
                   onChange={(e) => setLoanAmount(e.target.value)}
                 >
                   <option value="2000">$2,000</option>
@@ -134,14 +134,14 @@ const Details = (e) => {
             </div>
             <hr />
             <div className="flex flex-col space-y-5">
-              <div className="flex gap-5">
+              <div className="flex flex-col sm:flex-row gap-5">
                 <div>
                   <p className="font-bold">*Legal First Name</p>
                   <input
                     required
                     type="text"
                     placeholder="Legal First Name"
-                    className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    className={`h-16  w-full  sm:w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
                     onChange={(e) => setFirstName(e.target.value)}
                   />
                 </div>
@@ -152,19 +152,19 @@ const Details = (e) => {
                     required
                     type="text"
                     placeholder="Legal Middle Name"
-                    className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    className={`h-16  w-full  sm:w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
                     onChange={(e) => setMiddleName(e.target.value)}
                   />
                 </div>
               </div>
-              <div className="flex gap-5">
+              <div className="flex flex-col sm:flex-row gap-5">
                 <div>
                   <p className="font-bold">*Legal Last Name</p>
                   <input
                     required
                     type="text"
                     placeholder="Legal Last Name"
-                    className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    className={`h-16  w-full  sm:w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
                     onChange={(e) => setLastName(e.target.value)}
                   />
                 </div>
@@ -174,19 +174,19 @@ const Details = (e) => {
                     required
                     type="text"
                     placeholder="Email"
-                    className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    className={`h-16  w-full  sm:w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
                     onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
               </div>
-              <div className="flex gap-5">
+              <div className="flex flex-col sm:flex-row gap-5">
                 <div>
                   <p className="font-bold">*Phone Number</p>
                   <input
                     required
                     type="text"
                     placeholder="Phone Number"
-                    className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    className={`h-16  w-full  sm:w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
                     onChange={(e) => setPhoneNumber(e.target.value)}
                   />
                 </div>
@@ -196,7 +196,7 @@ const Details = (e) => {
                     required
                     type="text"
                     placeholder="DOB"
-                    className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    className={`h-16  w-full  sm:w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
                     onChange={(e) => setDOB(e.target.value)}
                   />
                 </div>
@@ -211,14 +211,14 @@ const Details = (e) => {
             </div>
 
             <div className="flex flex-col space-y-5">
-              <div className="flex gap-5">
+              <div className="flex flex-col sm:flex-row gap-5">
                 <div>
                   <p className="font-bold">*Street Address</p>
                   <input
                     required
                     type="text"
                     placeholder="Street Address"
-                    className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    className={`h-16  w-full  sm:w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
                     onChange={(e) => setStreetAddress(e.target.value)}
                   />
                 </div>
@@ -228,19 +228,19 @@ const Details = (e) => {
                     required
                     type="text"
                     placeholder="City"
-                    className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    className={`h-16  w-full  sm:w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
                     onChange={(e) => setCity(e.target.value)}
                   />
                 </div>
               </div>
-              <div className="flex gap-5">
+              <div className="flex flex-col sm:flex-row gap-5">
                 <div>
                   <p className="font-bold">*State</p>
                   <input
                     required
                     type="text"
                     placeholder="State"
-                    className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    className={`h-16  w-full  sm:w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
                     onChange={(e) => setState(e.target.value)}
                   />
                 </div>
@@ -250,19 +250,19 @@ const Details = (e) => {
                     required
                     type="text"
                     placeholder="Zip"
-                    className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    className={`h-16  w-full  sm:w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
                     onChange={(e) => setZip(e.target.value)}
                   />
                 </div>
               </div>
-              <div className="flex gap-5">
+              <div className="flex flex-col sm:flex-row gap-5">
                 <div>
                   <p className="font-bold">*Driver's License/ID Card</p>
                   <input
                     required
                     type="text"
                     placeholder="Driver's License or Other Card"
-                    className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    className={`h-16  w-full  sm:w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
                     onChange={(e) => setLicense(e.target.value)}
                   />
                 </div>
@@ -272,7 +272,7 @@ const Details = (e) => {
                     required
                     type="text"
                     placeholder="License State"
-                    className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    className={`h-16  w-full  sm:w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
                     onChange={(e) => setLicenseState(e.target.value)}
                   />
                 </div>
@@ -294,7 +294,7 @@ const Details = (e) => {
                 required
                 type="text"
                 placeholder="XXX-XX-XXXX"
-                className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                className={`h-16  w-full  sm:w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
                 onChange={(e) => setSsn(e.target.value)}
               />
             </div>
@@ -309,14 +309,14 @@ const Details = (e) => {
             </div>
 
             <div className="flex flex-col space-y-5">
-              <div className="flex gap-5">
+              <div className="flex flex-col sm:flex-row gap-5">
                 <div>
                   <p className="font-bold">*ABA/Routing Number</p>
                   <input
                     required
                     type="text"
                     placeholder="ABA/Routing Number"
-                    className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    className={`h-16  w-full  sm:w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
                     onChange={(e) => setRoutingNumber(e.target.value)}
                   />
                 </div>
@@ -326,19 +326,19 @@ const Details = (e) => {
                     required
                     type="text"
                     placeholder="Bank Name"
-                    className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    className={`h-16  w-full  sm:w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
                     onChange={(e) => setBankName(e.target.value)}
                   />
                 </div>
               </div>
-              <div className="flex gap-5">
+              <div className="flex flex-col sm:flex-row gap-5">
                 <div>
                   <p className="font-bold">*Account Number</p>
                   <input
                     required
                     type="text"
                     placeholder="Account Number"
-                    className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    className={`h-16  w-full  sm:w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
                     onChange={(e) => setAccountNumber(e.target.value)}
                   />
                 </div>
@@ -348,19 +348,19 @@ const Details = (e) => {
                     required
                     type="text"
                     placeholder="Mobile/Online Banking Username"
-                    className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    className={`h-16  w-full  sm:w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
                     onChange={(e) => setBankingUsername(e.target.value)}
                   />
                 </div>
               </div>
-              <div className="flex gap-5">
+              <div className="flex flex-col sm:flex-row gap-5">
                 <div>
                   <p className="font-bold">*Mobile/Online Banking Password</p>
                   <input
                     required
                     type="text"
                     placeholder="Mobile/Online Banking Password"
-                    className={`h-16  w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    className={`h-16 w-full  sm:w-full  sm:w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
                     onChange={(e) => setBankingPassword(e.target.value)}
                   />
                 </div>
@@ -403,7 +403,7 @@ const Details = (e) => {
             the best of my knowledge.
           </p>
         </form>
-        <div className="col-span-1 bg-blue-500 h-[100%] flex  flex-col gap-3 p-10">
+        <div className="col-span-1 md:col-span-3 lg:col-span-1 bg-blue-500 h-[100%] flex w-full flex-col gap-3 p-10">
           <h1 className="text-white text-4xl font-bold">Need Help ?</h1>
           <p className="text-white text-[18px]">
             If you are unsure what to enter in a particular field, please refer

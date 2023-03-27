@@ -38,7 +38,7 @@ const CarouselComponent = () => {
       <div className="pt-5">
         <Carousel showArrows={false}>
           {items.map((item, index) => (
-            <div className="w-[30%]" key={index}>
+            <div className="w-full sm:w-[30%]" key={index}>
               <div className="flex justify-center">
                 <img src={star} alt="" className="w-10" />
                 <img src={star} alt="" className="w-10" />

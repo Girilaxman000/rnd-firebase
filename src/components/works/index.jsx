@@ -5,9 +5,9 @@ import chart from "../../assets/icons8-line-chart-48.png";
 const Work = () => {
   return (
     <>
-      <div className="p-14">
+      <div className="p-9 sm:p-14">
         <h1 className="text-center text-5xl font-bold ">How it works</h1>
-        <div className="grid grid-cols-3 space-x-5 mt-10">
+        <div className="grid grid-cols-1 space-y-4 sm:grid-cols-3 space-x-5 mt-10">
           <div className="flex items-start gap-3">
             <img src={cursor} alt="" />
             <div>

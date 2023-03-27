@@ -19,7 +19,7 @@ const Loan = () => {
         <div
           data-aos="fade-down"
           data-aos-easing="ease"
-          className="grid grid-cols-3 space-x-6"
+          className="grid grid-cols-1 space-y-8  sm:grid-cols-3 space-y-6"
         >
           <div className="flex gap-5 items-start">
             <img src={cursor} alt="" />
@@ -32,7 +32,7 @@ const Loan = () => {
               </p>
             </div>
           </div>
-          <div className="flex gap-5 items-start">
+          <div className="flex mt-0 ml-0 gap-5 items-start">
             <img src={techometer} alt="" />
             <div>
               <h1 className="text-2xl font-bold">CREDIT SCORE HAS NO IMPACT</h1>
@@ -42,7 +42,7 @@ const Loan = () => {
               </p>
             </div>
           </div>
-          <div className="flex gap-5 items-start">
+          <div className="flex mt-0 ml-0 gap-5 items-start">
             <img src={chart} alt="" />
             <div className="space-y-4">
               <div className="flex items-center gap-3">
@@ -62,7 +62,7 @@ const Loan = () => {
         </div>
       </div>
       <div className="bg-gradient-to-r to-cyan-500 from-blue-500 p-5 ">
-        <div className=" w-[35%] mx-auto  flex  ">
+        <div className="w-[90%] sm:w-[35%] mx-auto  flex flex-col  gap-3 sm:flex-row  ">
           <p className="text-white">
             Have your personal and banking information ready when you complete
             our form and you will get a decision in minutes.
