@@ -7,7 +7,7 @@ const Work = () => {
     <>
       <div className="p-9 sm:p-14">
         <h1 className="text-center text-5xl font-bold ">How it works</h1>
-        <div className="grid grid-cols-1 space-y-4 sm:grid-cols-3 space-x-5 mt-10">
+        <div className="grid grid-cols-1  sm:grid-cols-3 space-x-5 mt-10">
           <div className="flex items-start gap-3">
             <img src={cursor} alt="" />
             <div>
@@ -15,7 +15,7 @@ const Work = () => {
               <p>Fill out our short form secured with 256-bit technology.</p>
             </div>
           </div>
-          <div className="flex items-start gap-3">
+          <div className="flex ml-0 mt-0 items-start gap-3">
             <img src={techometer} alt="" />
             <div>
               <h1 className="text-[20px] font-semibold">RECEIVE RESPONSE</h1>
@@ -25,7 +25,7 @@ const Work = () => {
               </p>
             </div>
           </div>
-          <div className="flex items-start gap-3">
+          <div className="flex ml-0 mt-0 items-start gap-3">
             <img src={chart} alt="" />
             <div>
               <h1 className="text-[20px] font-semibold">CHECK YOUR ACCOUNT</h1>

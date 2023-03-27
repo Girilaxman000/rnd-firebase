@@ -19,7 +19,7 @@ const Loan = () => {
         <div
           data-aos="fade-down"
           data-aos-easing="ease"
-          className="grid grid-cols-1 space-y-8  sm:grid-cols-3 space-y-6"
+          className="grid grid-cols-1 space-y-8  sm:grid-cols-3 sm:space-y-0 space-x-3"
         >
           <div className="flex gap-5 items-start">
             <img src={cursor} alt="" />

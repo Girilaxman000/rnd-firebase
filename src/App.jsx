@@ -6,7 +6,7 @@ import Apply from "./components/pages/Apply.page";
 //use aos library
 function App() {
   return (
-    <div>
+    <div style={{ overflow: "hidden" }}>
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/apply" element={<Apply />} />

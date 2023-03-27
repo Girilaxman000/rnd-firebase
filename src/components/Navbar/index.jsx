@@ -68,7 +68,7 @@ const Navbar = () => {
           <div data-aos="zoom-in">
             <button
               type="button"
-              className="text-white bg-gradient-to-r hover:to-green-400 hover:from-blue-500 from-pink-500 to-yellow-500 p-4 rounded-xl"
+              className="text-white text-xs sm:text-lg bg-gradient-to-r hover:to-green-400 hover:from-blue-500 from-pink-500 to-yellow-500 p-2 sm:p-4 rounded-xl"
             >
               <Link to="/apply">RETURNING CUSTOMER</Link>
             </button>
