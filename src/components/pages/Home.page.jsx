@@ -19,12 +19,6 @@ function Home() {
     <div>
       <Navbar />
       {/* <HomeForm /> */}
-      <Loan />
-      <ProsperLoans />
-      <Work />
-      <Questions />
-      <CarouselComponent />
-      <Content />
     </div>
   );
 }

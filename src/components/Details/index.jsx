@@ -151,15 +151,7 @@ const Details = (e) => {
             </div>
           </div>
 
-          <button
-            className={`mt-5 bg-blue-500 text-white px-4 py-2 rounded-md block mx-auto ${
-              !isChecked ? "cursor-not-allowed" : ""
-            }`}
-            type="submit"
-            disabled={!isChecked}
-          >
-            SUBMIT
-          </button>
+          <button type="submit">SUBMIT</button>
         </form>
       </div>
     </>
