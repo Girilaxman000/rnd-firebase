@@ -7,7 +7,10 @@ const Work = () => {
     <>
       <div className="p-9 sm:p-14">
         <h1 className="text-center text-5xl font-bold ">How it works</h1>
-        <div className="grid grid-cols-1  sm:grid-cols-3 space-x-5 mt-10">
+        <div
+          className="grid grid-cols-1 space-y-6 space-x-0 sm:grid-cols-3 sm:space-x-5 sm:space-y-0
+         mt-10"
+        >
           <div className="flex items-start gap-3">
             <img src={cursor} alt="" />
             <div>
