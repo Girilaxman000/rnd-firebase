@@ -1,6 +1,6 @@
 {
   "name": "choices",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -13,6 +13,7 @@
     "@heroicons/react": "^2.0.16",
     "aos": "^2.3.4",
     "firebase": "^9.17.1",
+    "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-elastic-carousel": "^0.11.5",
