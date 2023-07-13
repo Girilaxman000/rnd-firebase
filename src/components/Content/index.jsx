@@ -26,21 +26,6 @@ const Content = () => {
         </div>
         <div className="flex flex-col gap-5 pt-10">
           <p className="text-[17px]">
-            Because LendingThree IS NOT A LENDER, we cannot ultimately decide
-            whether or not you are approved for a loan. We also cannot determine
-            or influence the amount of money you may receive using our referral
-            services. The operator of this web site will share the information
-            you provide with participating lenders, advertisers, networks and
-            other partners who may or may not lend or issue loans. Providing
-            your information on this web site does not guarantee that you will
-            be chosen by a lender or approved for a loan. We do not act as
-            agents, brokers, or representatives for any of our lenders, and we
-            do not endorse or charge you for any service or product. All
-            information that we collect and share about you is in accordance
-            with our Privacy Policy which we advise you to review before
-            submitting any information using our form.
-          </p>
-          <p className="text-[17px]">
             Because each lender is different and LendingThree has no control
             over the rates and fees each lender charges, we urge you to
             carefully review the terms associated with the offer before
